@@ -8,19 +8,35 @@ let arr = [
 // Please don't change anything in the index.html file.
 
 function PrintDeveloper() {
-  //Write your code here , just console.log
+  //Write your code here , just console.log.
+  let allDev = arr.filter((element)=>{
+    return element.profession==="developer";
+  })
+  console.log(allDev);
 }
 
 function addData() {
   //Write your code here, just console.log
+  arr.push({id:4,name:"susan",age:"20",profession:"intern"});
+  consoleArr();
 }
 
 function removeAdmin() {
   //Write your code here, just console.log
+  arr = arr.filter((element)=>{
+    return element.profession!=="admin";
+  })
+  consoleArr();
 }
 
 function concatenateArray() {
   //Write your code here, just console.log
+  let newArray = [ { id: 11, name: 'johny', age: 28, profession: 'tester' },
+                   { id: 22, name: 'jackey', age: 27, profession: 'QA' },
+                   { id: 33, name: 'karean', age: 39, profession: 'frontentDeveloper' },
+                  ]
+      let concatenteArr = arr.concat(newArray);
+      console.log(concatenteArr);
 }
 
 // Here is an example of how functions work,
